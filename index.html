@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocoX</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="container header-container">
+      <img src="images/focox.png" alt="">
+      <a href="login.html">
+        <div class="login-mobile"><svg xmlns="http://www.w3.org/2000/svg" width="70%" height="auto" viewBox="0 0 24 24">
+            <path fill="black" fill-rule="evenodd" d="M7.75 7.5a4.25 4.25 0 1 1 8.5 0a4.25 4.25 0 0 1-8.5 0M12 4.75a2.75 2.75 0 1 0 0 5.5a2.75 2.75 0 0 0 0-5.5m-4 10A2.25 2.25 0 0 0 5.75 17v1.188c0 .018.013.034.031.037c4.119.672 8.32.672 12.438 0a.04.04 0 0 0 .031-.037V17A2.25 2.25 0 0 0 16 14.75h-.34a.3.3 0 0 0-.079.012l-.865.283a8.75 8.75 0 0 1-5.432 0l-.866-.283a.3.3 0 0 0-.077-.012zM4.25 17A3.75 3.75 0 0 1 8 13.25h.34q.28.001.544.086l.866.283a7.25 7.25 0 0 0 4.5 0l.866-.283c.175-.057.359-.086.543-.086H16A3.75 3.75 0 0 1 19.75 17v1.188c0 .754-.546 1.396-1.29 1.517a40.1 40.1 0 0 1-12.92 0a1.54 1.54 0 0 1-1.29-1.517z" clip-rule="evenodd" />
+          </svg></div>
+      </a>
+      <div class="user-options">
+        <input type="text" placeholder="Pesquisar...">
+        <ul>
+          <a href="#cursos-sec">
+            <li>Cursos</li>
+          </a>
+          <a href="#comunidade-sec">
+            <li>Comunidade</li>
+          </a>
+          <a href="#suporte-sec">
+            <li>Suporte</li>
+          </a>
+        </ul>
+        <div class="user-icon" onmouseenter="mostrarDropdownMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="70%" height="auto" viewBox="0 0 24 24">
+            <path fill="black" fill-rule="evenodd" d="M7.75 7.5a4.25 4.25 0 1 1 8.5 0a4.25 4.25 0 0 1-8.5 0M12 4.75a2.75 2.75 0 1 0 0 5.5a2.75 2.75 0 0 0 0-5.5m-4 10A2.25 2.25 0 0 0 5.75 17v1.188c0 .018.013.034.031.037c4.119.672 8.32.672 12.438 0a.04.04 0 0 0 .031-.037V17A2.25 2.25 0 0 0 16 14.75h-.34a.3.3 0 0 0-.079.012l-.865.283a8.75 8.75 0 0 1-5.432 0l-.866-.283a.3.3 0 0 0-.077-.012zM4.25 17A3.75 3.75 0 0 1 8 13.25h.34q.28.001.544.086l.866.283a7.25 7.25 0 0 0 4.5 0l.866-.283c.175-.057.359-.086.543-.086H16A3.75 3.75 0 0 1 19.75 17v1.188c0 .754-.546 1.396-1.29 1.517a40.1 40.1 0 0 1-12.92 0a1.54 1.54 0 0 1-1.29-1.517z" clip-rule="evenodd" />
+          </svg>
+          <ul class="dropdown-menu" onmouseleave="esconderDropdownMenu()">
+
+            <li><a href="login.html">Fazer login</a></li>
+            <hr width="150px">
+            <li><a href="https://pay.kiwify.com.br/oF1xj9S">Adquirir acesso</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="carousel-sec">
+    <div class="container">
+      <div class="carousel">
+        <div class="carousel-info">
+          <div>
+            <h1 id="carousel-title">Tráfego pago avançado</h1>
+            <p id="carousel-descript">Aprenda as técnicas avançadas que levaram a Foco Marketing gerenciar mais de 10 milhões de reais em anúncios online em menos de 3 anos.</p>
+            <a href="login.html"><button>Assistir agora</button></a>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </section>
+  <section class="bullets">
+    <div id="marcos" onclick="trocarBanner()"></div>
+    <div id="daniel" onclick="trocarBanner()"></div>
+    <div id="meireles" onclick="trocarBanner()"></div>
+  </section>
+  <section id="cursos-sec">
+    <div class="container cursos">
+      <h1>Aprenda com quem é referência</h1>
+      <hr width="350px" color="#FFF600">
+      <p>Tudo para você se especializar e se tornar um profissional completo.<br> Acesse os cursos:</p>
+      <a href="login.html">
+        <div class="cards-cursos">
+          <img src="images/1.png" alt="">
+          <img src="images/2.png" alt="">
+          <img src="images/3.png" alt="">
+          <img src="images/4.png" alt="">
+          <img src="images/5.png" alt="">
+          <img src="images/6.png" alt="">
+          <img src="images/7.png" alt="">
+          <img src="images/8.png" alt="">
+        </div>
+      </a>
+      <p class="endline">E muito mais <span>conteúdos atualizados</span> mensalmente<span>...</span></p>
+    </div>
+  </section>
+  <section id="comunidade-sec">
+    <div class="container cursos">
+      <h1>Participe da comunidade</h1>
+      <hr width="350px" color="#FFF600">
+      <p>Interaja com outras pessoas que estão evoluindo junto com você.<br> Aompanhe os tópicos:</p>
+      <div class="topicos">
+        <div class="topico">
+          <div class="topico-conteudo" id="trafego-gringa">
+            <h2>Tópico: Tráfego para vender na gringa</h2>
+            <img src="images/comunidade.png" alt="">
+            <a href="login.html"><button>Ver comentários</button></a>
+          </div>
+        </div>
+        <div class="topico">
+          <div class="topico-conteudo" id="ferramenta-vendas">
+            <h2>Tópico: Ferramenta para o time de vendas</h2>
+            <img src="images/comunidade2.png" alt="">
+            <a href="login.html"><button>Ver comentários</button></a>
+          </div>
+        </div>
+        <div class="topico">
+          <div class="topico-conteudo" id="fee-cliente">
+            <h2>Tópico: Como cobrar mais caro do cliente</h2>
+            <img src="images/comunidade3.png" alt="">
+            <a href="login.html"><button>Ver comentários</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="cta-sec">
+    <div class="container cta">
+      <h1>Ainda não tem acesso a <span>comunidade Focado Start</span>?</h1>
+      <hr width="350px" color="#FFF600">
+      <p>Não perca mais tempo, garanta agora o seu acesso e aproveite todo o know-how de especialistas da área.<br><br>Aqui você encontra:</p>
+      <div class="cta-points">
+        <li>Estratégias validadas</li>
+        <li>Passo a passo completo</li>
+        <li>Como iniciar do zero</li>
+        <li>Ferramentas para uso</li>
+        <li>Estratégias avançadas</li>
+        <li>Mentores especialistas</li>
+        <li>Formação em todas as áreas</li>
+        <li>Aulas atualizadas</li>
+        <li>PDFs de apoio</li>
+        <li>E muito mais...</li>
+      </div>
+      <a href="https://pay.kiwify.com.br/oF1xj9S"><button>Quero acessar agora</button></a>
+    </div>
+  </section>
+
+  <section id="suporte-sec">
+    <div class="container suporte">
+      <hr width="100%" color="#FFF600">
+      <h1><span>Fale com o nosso time!</span></h1>
+      <p>Você pode entrar em contato conosco preenchendo o formulário abaixo ou, se preferir, mandar uma mensagem diretamente para o Felipe Tupinambá.</p>
+      <form action="">
+        <label for="nome">Qual o seu nome?</label>
+        <input type="text" name="nome" id="nome">
+        <label for="email">Digite o seu melhor e-mail.</label>
+        <input type="email" name="email" id="email">
+        <label for="wpp">Qual o seu número de WhatsApp?</label>
+        <input type="tel" name="wpp" id="wpp">
+        <label for="msg">Digite a sua dúvida.</label>
+        <textarea name="msg" id="msg"></textarea>
+        <a href="https://api.whatsapp.com/send?phone=553888180075&text=Olá!%20Tenho%20interesse%20na%20comunidade%20Focado%20Start.%20Gostaria%20de%20saber%20mais%20sobre"><button>Enviar</button></a>
+      </form>
+      <div class="contato-wpp">
+        <img src="images/foto-felipe-tupi.png" id="tupi" alt="">
+        <div>
+          <h2>Felipe Tupinambá</h2>
+          <p>Diretor Comercial</p>
+          <a href="https://api.whatsapp.com/send?phone=553888180075&text=Olá!%20Tenho%20interesse%20na%20comunidade%20Focado%20Start.%20Gostaria%20de%20saber%20mais%20sobre"><button>Chamar no WhatsApp</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container"><img id="capa" src="images/capa.png" alt=""></div>
+  </section>
+</body>
+<script src="script.js"></script>
+
+</html>
