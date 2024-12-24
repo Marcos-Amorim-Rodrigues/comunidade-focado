@@ -20,6 +20,22 @@ and (max-width: 667px){
     text-align: center !important;
   }
 
+  #tupi{
+    width: 130px !important;
+  }
+
+  .suporte form{
+    width: 80% !important;
+  }
+
+  .suporte form input, textarea{
+    width: 85% !important;
+  }
+
+  .venda-conteudo{
+    width: 60% !important;
+  }
+
 }
 
 *{
