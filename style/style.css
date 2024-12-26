@@ -192,7 +192,7 @@ header{
 .carousel{
   background-image: url('../images/banner.png');
   background-size: cover;
-  background-position: right 35% bottom 50%;
+  background-position: right 35% bottom 90%;
   border-radius: .5rem;
   height: 70vh;
   margin-top: 3rem;
