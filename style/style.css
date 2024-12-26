@@ -254,7 +254,7 @@ justify-content: center;
 }
 
 .cursos{
-  margin-top: 8rem;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -270,7 +270,7 @@ justify-content: center;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content:center;
+  justify-content:space-around;
   align-items: left;
   gap: 1rem;
 }
