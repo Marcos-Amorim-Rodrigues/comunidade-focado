@@ -56,13 +56,3 @@ function trocarBanner() {
 
 //timer para a troca recorrente do carrossel
 const interval = setInterval(trocarBanner, 10000);
-
-//dropdown menu de login e aquisição de acesso
-let dropdownMenu = document.querySelector('.dropdown-menu');
-dropdownMenu.style.display = 'none';
-function mostrarDropdownMenu() {
-  dropdownMenu.style.display = 'flex';
-}
-function esconderDropdownMenu() {
-  dropdownMenu.style.display = 'none';
-}
