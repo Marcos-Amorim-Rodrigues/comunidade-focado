@@ -40,6 +40,20 @@ and (max-width: 667px){
     display: none !important; 
   }
 
+  .suport-form div{
+    justify-content: center !important;
+  }
+
+  .suport-form{
+    width: 100% !important;
+    justify-content: center !important;
+    margin-bottom: 2rem;
+  }
+
+  .suport-image{
+    width: 100% !important;
+  }
+
 }
 
 *{
@@ -801,4 +815,246 @@ input[type="file"] {
   object-fit: cover;
   border-radius: 6rem;
   border: 2px solid #fff600;
+}
+
+#comunidade{
+  margin-top: 2rem;
+}
+
+#header-comunidade{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#header-comunidade h1{
+  color: #FFF600;
+}
+
+.topics-container{
+  background: #242424;
+  width: 100%;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.topic-comunidade{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 90%;
+  gap: 1rem;
+}
+
+.profile-photo-comunidade{
+  width: 3rem;
+  border-radius: 50%;
+  border: 2px solid #fff600;
+}
+
+.comment-photo-comunidade{
+  border-color: #444; 
+}
+
+.topic-owner{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topic-theme{
+  background-color: #151515;
+  padding: 1rem;
+  border-radius: .5rem;
+  border-left: 3px solid #fff600;
+}
+
+.comment-theme{
+  border-color: #444; 
+}
+
+.topic-comment{
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  display: none;
+}
+
+.owner-comment{
+  border-left: 3px solid #fff600;
+}
+
+.topic-image{
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: .5rem;
+  border-left: 3px solid #fff600;
+}
+
+.ver-comentarios{
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #FFF;
+}
+
+.ver-comentarios:hover{
+  text-decoration: underline 2px #FFF600;
+  text-underline-offset: 4px;
+}
+
+#new-topic{
+  display: flex;
+  justify-content: right;
+  margin-top: 1rem;
+}
+
+#new-topic button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14rem;
+  gap: .5rem;
+}
+
+#new-topic button:hover{
+  width: 15rem;
+}
+
+#new-topic-form{
+  display: none;
+}
+
+.newTopicForm{
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.newTopicForm form{
+  display: flex;
+  width: 90%;
+}
+
+.newTopicForm textarea{
+  min-width: 90%;
+  background-color: #151515;
+  border: solid 1.5px #444;
+  height: 4rem;
+  border-radius: .5rem;
+  padding: 2rem;
+  font-size: 1rem;
+  color: white;
+  padding-inline: 2rem;
+  resize: none;
+  text-align: center;
+}
+
+.newTopicForm input{
+  min-width: 90%;
+  background-color: #151515;
+  border: solid 1.5px #444;
+  height: 1rem;
+  border-radius: .5rem;
+  padding: 1.5rem;
+  font-size: 1rem;
+  color: white;
+  padding-inline: 2rem;
+  resize: none;
+  text-align: center;
+}
+
+.topicNewImage{
+  border: 2px solid #444;
+  border-style: dotted;
+  border-radius: .5rem;
+  display: inline-block;
+  padding: 2rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #444;
+  font-size: 1rem;
+  gap: .5rem;
+  min-width: 90%;
+}
+
+.faq{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.question{
+  background-color: #242424;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+.answer{
+  padding: 0 2rem 0 2rem;
+}
+
+.answerHide{
+  display: none;
+}
+
+.second-suport-section{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.suport-form{
+  width: 50%;
+  display: flex;
+  min-width: 350px;
+}
+
+.suport-form div{
+  width: 80%;
+  min-width: 350px;
+  background-color: #242424;
+  border-radius: .5rem;
+  padding: 2.4rem;
+  display: flex;
+  align-items: left;
+  gap: 1.5rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.suport-image{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.suport-image img{
+  width: 60%;
+  min-width: 350px;
 }
