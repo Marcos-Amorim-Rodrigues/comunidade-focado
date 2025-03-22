@@ -199,10 +199,12 @@ header{
 }
 
 .dropdown-menu li{
-  width: 95%;
-  padding: .7rem 0 .7rem 5%;
+  width: 100%;
+  padding: .7rem 0 .7rem 0;
   border-radius: .5rem;
   margin: 0;
+  list-style-type: none;
+  text-indent: 10px;
 }
 
 .dropdown-menu li:hover{
@@ -879,6 +881,13 @@ input[type="file"] {
   border-color: #444; 
 }
 
+.comment-texts{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
 .topic-comment{
   padding: 1rem 2rem 1rem 2rem;
   border-radius: .5rem;
@@ -1057,4 +1066,21 @@ input[type="file"] {
 .suport-image img{
   width: 60%;
   min-width: 350px;
+}
+
+.previous-next-buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0 2rem 0;
+}
+
+.password-eye, .password-eye2{
+  position: absolute;
+  transform: translate(-150%,20%);
+  cursor: pointer;
+}
+
+.eye-hide{
+  display: none;
 }

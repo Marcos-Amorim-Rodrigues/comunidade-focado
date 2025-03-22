@@ -7,6 +7,12 @@ $sqlClass = $pdo->prepare("SELECT * FROM classes WHERE id = '$idClass'");
 $sqlClass->execute();
 $classInfo = $sqlClass->fetch(PDO::FETCH_ASSOC);
 
+$nextClassFlag = 0;
+$nextClass = 0;
+
+$previousClassFlag = 0;
+$previousClass = 0;
+
 $userInfo = $sql->fetch(PDO::FETCH_ASSOC);
 $userId = $userInfo['id'];
 
@@ -48,6 +54,17 @@ if (!empty($_POST["comentario"])) {
           $sqlMoreClasses = $pdo->prepare("SELECT * FROM classes WHERE course = '$selectedCourse'");
           $sqlMoreClasses->execute();
           foreach ($sqlMoreClasses as list($otherId, $otherClass, $otherCourse, $otherModule)) {
+            if ($nextClassFlag == 1) {
+              $nextClass = $otherId;
+              $nextClassFlag = 0;
+            }
+            if ($otherId === $classInfo['id']) {
+              $nextClassFlag = 1;
+              $previousClassFlag = 1;
+            }
+            if ($previousClassFlag == 0) {
+              $previousClass = $otherId;
+            }
           ?>
             <a href="aula.php?id=<?= $otherId ?>">
               <div class="otherClass <?php if ($otherClass == $classInfo['class']) {
@@ -58,12 +75,18 @@ if (!empty($_POST["comentario"])) {
         </div>
         <iframe class="classes" src="https://www.youtube.com/embed/DxGmyheUwQI?si=kgDe_J05RrgsHwhP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <div class="classButtons">
-          <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m13 15l-3-3l3-3" />
-            </svg>Aula anterior</button>
-          <button>Próxima aula<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11 9l3 3l-3 3" />
-            </svg></button>
+          <a href=<?php
+                  if ($previousClass == 0) echo 'cursos.php';
+                  else echo "aula.php?id=$previousClass";
+                  ?>><button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m13 15l-3-3l3-3" />
+              </svg>Aula anterior</button> </a>
+          <a href=<?php
+                  if ($nextClass == 0) echo 'cursos.php';
+                  else echo "aula.php?id=$nextClass";
+                  ?>><button>Próxima aula<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11 9l3 3l-3 3" />
+              </svg></button></a>
         </div>
         <div class="classRating">
           <p>Avalie esta aula: </p>

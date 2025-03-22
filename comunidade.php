@@ -87,84 +87,16 @@ if (isset($_FILES['topicUpload'])) {
           </form>
         </div>
       </div>
-      <div class="topics-container">
-        <?php
-        $sqlTopicos = $pdo->prepare("SELECT * FROM topicos");
-        $sqlTopicos->execute();
-        foreach ($sqlTopicos as list($idTopico, $tituloTopico, $descTopico, $usuarioTopico, $imagemTopico)) {
-        ?>
-          <div class="topic-comunidade">
-            <h2>Tópico: <span><?= $tituloTopico ?></span></h2>
-            <div class="topic-owner">
-              <img src="
-              <?php
-              $sqlUsuario = $pdo->prepare("SELECT * FROM usuarios WHERE id = '$usuarioTopico'");
-              $sqlUsuario->execute();
-              $sqlUsuarioInfo = $sqlUsuario->fetch(PDO::FETCH_ASSOC);
-              if ($sqlUsuarioInfo['imagepath'] != '') echo $sqlUsuarioInfo['imagepath'];
-              else echo 'images/userImages/default-image.jpg';
-              ?>
-                " alt="" class="profile-photo-comunidade">
-              <h3>
-                <?php
-                $sqlUsuario = $pdo->prepare("SELECT * FROM usuarios WHERE id = '$usuarioTopico'");
-                $sqlUsuario->execute();
-                echo $sqlUsuario->fetch(PDO::FETCH_ASSOC)['name'];
-                ?>
-              </h3>
-            </div>
-            <p class="topic-theme">
-              <?= $descTopico ?>
-            </p>
-            <?php
-            if ($imagemTopico) {
-            ?>
-              <img src="<?= $imagemTopico ?>" alt="" class="topic-image">
-            <?php
-            }
-            ?>
-            <p class="ver-comentarios" id="<?php echo $idTopico ?>" onclick="abrirComentarios(this.id)">Ver comentários <svg id='seta-<?php echo $idTopico ?>' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 11l-3 3l-3-3" />
-              </svg></p>
-            <?php
-            $sqlTopicoComentarios = $pdo->prepare("SELECT * FROM comentariostopicos WHERE topico = '$idTopico'");
-            $sqlTopicoComentarios->execute();
-            foreach ($sqlTopicoComentarios as list($idComentario, $descComentario, $usuarioComentario, $topicoComentario)) {
-            ?>
-              <div class="topic-comment comentario-<?php echo $idTopico ?>">
-                <div class="topic-owner">
-                  <img src="
-                <?php
-                $sqlUsuarioComentario = $pdo->prepare("SELECT * FROM usuarios WHERE id = '$usuarioComentario'");
-                $sqlUsuarioComentario->execute();
-                $usuarioComentarioInfo = $sqlUsuarioComentario->fetch(PDO::FETCH_ASSOC);
-                if ($usuarioComentarioInfo['imagepath']) echo $usuarioComentarioInfo['imagepath'];
-                else echo 'images/userImages/default-image.jpg';
-                ?>
-                " alt="" class="profile-photo-comunidade comment-photo-comunidade">
-                  <h3><?= $usuarioComentarioInfo['name'] ?></h3>
-                </div>
-                <p class="topic-theme comment-theme <?php if ($usuarioComentario === $userId) echo 'owner-comment'; ?>"><?= $descComentario ?></p>
-              </div>
-            <?php
-            }
-            ?>
-            <div class="newComment">
-              <form action="comunidade.php?id=<?= $idTopico ?>" method="POST">
-                <input type="text" name="comentario" placeholder="Deixe o seu comentário...">
-                <button>Comentar</button>
-              </form>
-            </div>
-          </div>
-        <?php
-        }
-        ?>
+      <div class="topics-container" id="topics-container">
       </div>
-    </div>
+      <div class="previous-next-buttons">
+        <button onclick="listarTopicos()" id="load-more">Carregar mais</button>
+      </div>
   </section>
 </body>
 <script src="js/dropdown-menu-login.js"></script>
 <script src="js/ver-comentarios-topicos.js"></script>
 <script src="js/ver-form-novo-topico.js"></script>
+<script src="js/listar-topicos.js"></script>
 
 </html>
